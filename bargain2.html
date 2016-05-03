@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <title>砍课帮帮忙 | 阿卡索外教网</title>
+    <meta name="description" content="阿卡索外教网提供在线英语口语培训，全程外教一对一教学模式，是专业的在线英语培训网站，阿卡索外教老师均毕业于国际知名的一流学府，拥有标准的英语口语以及最纯正的教学知识。您值得拥有" />
+    <meta name="keywords" content="在线英语口语培训，在线英语培训，外教一对一，英语外教一对一，英语网络教学" />
+    <link rel="stylesheet" href="http://img.acadsoc.com.cn/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <script src="http://img.acadsoc.com.cn/js/vendor/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src='/ajax/Web.UI.Fun.IpRecord.aspx'></script>
+    <script src="http://img.acadsoc.com.cn/js/IdentificationSystem.js"></script>
+    <!--[if lt IE 9]>
+        <script src="http://img.acadsoc.com.cn/js/vendor/html5shiv.js"></script>
+        <script src="http://img.acadsoc.com.cn/js/vendor/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .section img{max-width: 100%;-webkit-transition:all 0.7s ease-out;-moz-transition:all 0.7s ease-out;-o-transition:all 0.7s ease-out;transition:all 0.7s ease-out}
+        .section1,.section3{text-align: center;}
+        .section2{background: url("img/friend-bg2.jpg") bottom center no-repeat;background-size: cover;text-align: center;}
+        .bg-f{background-color: #fff;border-radius: 10px;margin: 0 5%;padding: 5px 15px;}
+        .bg-f h2{color: #fb4c56;margin-bottom: 30px;}
+        .bg-f p{margin: 15px 0;color: #666;}
+        .bg-f input{margin: 15px 0;text-align: center;color: #fb4852;background-color: #faebd7;border: 1px solid #f8e1c1;}
+        .bg-f ::-webkit-input-placeholder { /* WebKit browsers */ 
+		color: #fb4852; 
+		} 
+		.bg-f :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+		color: #fb4852; 
+		} 
+		.bg-f ::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+		color: #fb4852; 
+		} 
+		.bg-f :-ms-input-placeholder { /* Internet Explorer 10+ */ 
+		color: #fb4852; 
+		} 
+        .btn-login{margin: 30px 0 15px;}
+        .buy_t{color: #666;font-size: 1.6em;}
+        .bg-p{background-color:#819cd3;width: 200px;color: #fff;padding: 10px 0;font-size: 1.2em;}
+        .step{position: relative;margin-top: 10px;}
+        .step-u{position: absolute;top: -19px;left: 4px;}
+        .login-form{padding: 0;}
+		.login-form p{margin-bottom:0;}
+		.content p{color: #666666;font-size: 1.6em;}
+		.content p span{color: #32b397;font-size: 1em;}
+		.content input{width: 100%;height: 40px;border: 1px solid #9a9a9a;color: #939393;margin: 15px auto;text-indent : 5px;font-size: 1.5em}
+		.content img{height: 16px;border: 1px solid #f1efef;vertical-align:middle;}
+		.get_num {color: #7f7f7f;}
+		.btn_get{width:100%;color: #fff;background-color: #32b397;border: none;border-radius: 5px;height: 50px;font-size: 1.6em;font-family: "微软雅黑";margin: 0 auto;}
+		#retroclockbox_xs{width: 100%;margin: 0 auto;line-height: 24px;}
+		.btn-link, .btn-link:active, .btn-link:focus, .btn-link:hover {border-color: transparent;color: #7f7f7f;background-color: transparent;padding: 1px 4px;text-decoration: none;}
+		.btn span{text-decoration: underline;font-size: 1.15em;}
+		.f-tit{width: 80%;margin: 0 auto;}
+		.text-danger{font-size: 0.5em;}
+		@media (max-height: 480px){
+            .login-tit{top: 11%;}
+            .ss{width: 70%;}
+        }
+    </style>
+    <script>
+    var _PageHeight = document.documentElement.clientHeight,
+    _PageWidth = document.documentElement.clientWidth;
+    //计算loading框距离顶部和左部的距离（loading框的宽度为89px，高度为95px）
+    var _LoadingTop = _PageHeight > 95 ? (_PageHeight - 95) / 2 : 0,
+    _LoadingLeft = _PageWidth > 89 ? (_PageWidth - 89) / 2 : 0;
+    //在页面未加载完毕之前显示的loading内容
+    var _LoadingHtml = '<div id="loadingDiv" style="position:absolute;left:0;width:100%;height:' + _PageHeight + 'px;top:0;background:#fff;opacity:1;filter:alpha(opacity=80);z-index:10000;"><div style="position: absolute; cursor1: wait; left: ' + _LoadingLeft + 'px; top:' + _LoadingTop + 'px; width: auto; height: 95px; line-height: 95px; padding-left: 89px; background: url(img/loading.gif) top center no-repeat scroll; color: #696969; font-family:\'Microsoft YaHei\';"></div></div>';
+    //loading效果
+    document.write(_LoadingHtml);
+    //监听加载状态改变
+    document.onreadystatechange = completeLoading;
+    //加载状态为complete时移除loading效果
+    function completeLoading() {
+        if (document.readyState == "complete") {
+            var loadingMask = document.getElementById('loadingDiv');
+            loadingMask.parentNode.removeChild(loadingMask);
+        }
+    }
+    $(function(){
+        $('#fullpage').fullpage({
+            sectionsColor : ['#fa444e', '#55e5e1', '#6381bf'],
+            loopHorizontal: false,
+            controlArrows: false,
+            keyboardScrolling: false,
+            scrollOverflow: true,
+            afterLoad: function (anchorLink, index) {
+                
+                if(index == 1){
+                    $.fn.fullpage.setAllowScrolling(false);
+                }
+            }
+
+        });
+
+        $('#fullpage').on('scroll', function (e) {
+            e.preventDefault();
+        });
+        $.fn.fullpage.setAllowScrolling(false);
+
+        $("#go").click(function () {
+            // if () {
+                $.fn.fullpage.moveTo(2);
+                $.fn.fullpage.setAllowScrolling(true);
+            // }else{
+            //  alert("未找到分享者资料")
+            //  $.fn.fullpage.setAllowScrolling(false);
+            // }
+        });
+        $("#go-r").click(function () {
+            $.fn.fullpage.moveTo(3);
+        });
+        $("#share").click(function () {
+            $(".bg-lay").show();
+            $(".share-i").show();
+        });
+        $(".bg-lay").click(function () {
+            $(".bg-lay").hide();
+            $(".share-i").hide();
+        });
+        $(".share-i").click(function () {
+            $(".bg-lay").hide();
+            $(".share-i").hide();
+        });
+    });
+    </script>
+</head>
+<body>
+	<div id="fullpage">
+		<div class="section section1">
+			<div class="bg-f clearfix">
+                <p class="buy_t" style="margin-bottom:5px;"><span id="txt_clientName" data-type="client_name">分享者</span>已购买了课程</p>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <img src="img/people.png" alt="" class="ss">
+                    </div>
+                </div>
+                <div class="">
+                    <div class="bg-p" style="margin-top:10px;">
+                        <span>已有<span id="p-num">0</span>人参与</span>
+                    </div>
+                    <div class="step">
+                        <img src="img/step1.png" alt="" id="step-i">
+                        <div class="step-u">
+                            <img src="img/step-u.png" alt="">
+                        </div>
+                    </div>
+                    <div class="btn-login">
+                        <a href="javascript:void(0);" id="go"><img src="img/btn-tast4.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="section section2">
+			<div class="bg-f">
+				<img src="img/thank.png" alt="">
+				<div class="btn-login">
+                    <a href="javascript:void(0);" id="go-r"><img src="img/btn-tast5.png" alt=""></a>
+                </div>
+			</div>
+		</div>
+		<div class="section section3">
+			<div class="bg-f">
+				<div class="f-tit"><img src="img/friend-tit.jpg" alt="" class="ss"></div>
+				<div class="login-form">
+					<input type="text" name="TxtPhone" pattern="^1[0-9]{10}" class="login-field form-control TxtPhone" required placeholder="手机号码" id="TxtPhone">
+					<div class="get_num row">	
+						<div class="col-md-6 col-xs-6" style="padding-right:5px;">
+                            <input type="text" name="TxtCode" class="login-field form-control" required placeholder="验证码" id="TxtCode"style="">
+                        </div>
+                        <div class="col-md-5 col-xs-5" style="padding:0;margin: 15px 0;">
+                        <button type="button" style="background-color:#fb4852; font-size:14px; padding:10px;border-radius:7px;margin-top:0px; text-decoration:none; font-weight:bold; text-align:center;border:2px solid #fff; color:#fff;" class="btn btn-link btn-xs sms-verify" id="btnGetSMS" data-toggle="tooltip" data-placement="bottom" title="系统将给您发送验证码短信，如果没有收到，可以尝试语音验证码。">获取验证码</button>
+                        </div>
+					</div>
+					<input type="password" name="TxtPassword" minlength="6" maxlength="22" required class="login-field form-control" placeholder="创建登录密码" id="TxtPassword">
+					<div class="col-md-offset-4 text-danger" ID="LitErrorMsg"></div>
+					<div class="btn-login" style="margin-top:5px;">
+						<a id="registerSubmit"><img src="img/btn-tast5.png" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.fullPage.min.js"></script>
+    <script>
+        $(function(){
+            chagesum();
+            chagestep();
+            stepimg();
+         });
+        function chagesum () {
+            $("#p-num").html(7);
+        }
+        function stepimg () {
+            var num=$("#p-num").text();
+            var stepwidth = $("#step-i").width();
+            var ww = 20/89*stepwidth/30;
+            var vv = 20/89*stepwidth/50;
+            var aa = stepwidth/584;
+            $(".step-u").css("width",30 * aa+"px")
+            if (num<=20) {
+                $(".step-u").css("left",(num/89*stepwidth)+"px");
+            } 
+            else if (num>20 && num<=50) {
+                $(".step-u").css("left",ww*(num-20)+(20/89*stepwidth)+"px");
+            }
+            else if (num>50 && num<=100) {
+                $(".bg-p").css("margin-left",stepwidth-200+"px")
+                $(".step-u").css("left",vv*(num-50)+ww*(50-20)+(20/89*stepwidth)+"px");
+            }
+            else if (num>100 && num<=150) {
+                $(".bg-p").css("margin-left",stepwidth-200+"px")
+                $(".step-u").css("left",vv*(num-100)+vv*(100-50)+ww*(50-20)+(20/89*stepwidth)+"px");
+            }
+         }
+        function chagestep () {
+            var num=$("#p-num").text();
+            if (num>=0 && num<20) {
+                $("#step-i").attr('src','img/step1.png');
+            } 
+            else if (num>=20 && num<50) {
+                $("#step-i").attr('src','img/step2.png');
+            }
+            else if (num>=50 && num<100) {
+                $("#step-i").attr('src','img/step3.png');
+            }
+            else if (num>=100 && num<150) {
+                $("#step-i").attr('src','img/step4.png');
+            }
+            else if (num=150) {
+                $("#step-i").attr('src','img/step5.png');
+            }
+        }
+         
+    </script>
+    <script>
+        $(function () {
+            Fn.IpRecord.LoadRecord(document.referrer, getQueryString("_s"), getQueryString("search"), getQueryString("_cl"), '', AccessType(), explorerType(), 0, document.URL);
+            var _au = getQueryString("_au");
+            if (_au != "")
+                Fn.IpRecord.RecommendationSale(getQueryString("_au"));
+            function getQueryString(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return unescape(r[2]); return "";
+            }
+        });
+    </script>
+    <div class="modal" id="model-verify">
+        <div class="modal-dialog" style="width:400px;max-width:100%; margin:100px auto;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true" data-dismiss="modal" tabindex="-1">
+                        &times;</button>
+                    <h4 class="modal-title">
+                        请输入图片里的文字</h4>
+                </div>
+                <div class="modal-body">
+                    <table>
+                        <tr>
+                            <td style="padding:5px;"><input type="text" id="txt_vercode" placeholder="请输入图片里的文字" maxlength="4" /></td>
+                            <td style="padding:5px;"><img alt="图型验证码" src="/vaildate.ashx" id="image_vercode" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <input type="hidden" id="hid_type" value="" />
+                    <button type="button" id="btnSubmit" class="btn btn-info">获取验证码</button>
+                    <button class="btn btn-xs btn-default verify-cancel" data-dismiss="modal" type="button">取消</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-backdrop in">
+        </div>
+    </div>
+    <script type="text/javascript" src="/Ajax/Web.UI.Fun.User.aspx"></script>
+    <script>
+        var btnGetVoice = $("#btnGetVoice");
+        var btnGetSMS = $("#btnGetSMS");
+
+        $(function () {
+            smsReload();
+        });
+
+        function smsReload() {
+            btnGetSMS.removeClass("disabled").attr("disabled", false).siblings("#btnGetSMS").attr("disabled", false);
+            btnGetVoice.removeClass("disabled").attr("disabled", false).siblings("#btnGetVoice").attr("disabled", false);
+            $(".append-count").remove();
+
+            btnGetSMS.click(function () {
+                sendCode(0);
+            });
+
+            btnGetVoice.click(function () {
+                sendCode(1);
+            });
+
+            $("#image_vercode").click(function () {
+                changeImage();
+            });
+        };
+        $(".reg-c").click(function () {
+            $("#model-reg").hide();
+        });
+        $(".modal .close,.verify-cancel").click(function () {
+            $("#model-verify").hide();
+        });
+
+        function changeImage() {
+            $("#txt_vercode").val("");
+            $("#image_vercode").attr("src", "/vaildate.ashx?t=" + new Date().getTime());
+        }
+
+        function sendCode(verifyType) {
+            if ($(".TxtPhone").val().length < 1) {
+                alert("请输入手机号码!");
+                return false;
+            }
+
+            changeImage();
+            $("#model-verify").show();
+            $("#txt_vercode").focus();
+            $("#hid_type").val(verifyType);
+        }
+
+        $("#btnSubmit").click(function () {
+            var countDown = 60;
+            var phone = $(".TxtPhone").val();
+            var imageVerCode = $("#txt_vercode").val();
+
+            if (imageVerCode.length != 4) {
+                alert("请正确输入图片里的文字");
+                return;
+            }
+
+            //Fn 发送
+            var verifyType = $("#hid_type").val();
+            var result = Fn.User.SMSCode(phone, verifyType, imageVerCode);
+            if (result["code"] != 0) {
+                alert(result["msg"]);
+                changeImage();
+                return;
+            }
+
+            //关闭
+            $("#model-verify").hide();
+
+            $(btnGetSMS).addClass("disabled").append("<span class='append-count'>&nbsp;(<span class='count-down'>" + countDown + "</span>)</span>").unbind("click").attr("disabled", true);
+
+            $(btnGetVoice).addClass("disabled").append("<span class='append-count'>&nbsp;(<span class='count-down'>" + countDown + "</span>)</span>").unbind("click").attr("disabled", true);
+
+            var countInterval = setInterval(function () {
+                countDown--;
+                $(".count-down").text(countDown);
+                if (countDown == 0) {
+                    smsReload();
+                    clearInterval(countInterval);
+                };
+            }, 1000);
+        });
+
+        $("#registerSubmit").click(function () {
+            var phone = $("#TxtPhone").val();
+            var pwd = $("#TxtPassword").val();
+            var code = $("#TxtCode").val();
+            if (phone.length < 1) {
+                alert("请输入您的手机号码!");
+                return false;
+            }
+            if (pwd.length < 1) {
+                alert("请输入密码，以便上课登录!");
+                return false;
+            }
+            if (code.length < 1) {
+                alert("请输入手机验证码，您可以点击“获取短信验证码”!");
+                return false;
+            }
+            var r = Fn.User.RegisterLP(phone, pwd, code);
+            if (r != undefined) {
+                if (r["_r"] == "-1") {
+                    $("#LitErrorMsg").html(r["errorMsg"]);
+                    return false;
+                }
+                else if (r["_r"] == "1") {
+                    Fn.User.CreateRegisterRecord(3);
+
+                    window.location = "/User/userinfo.aspx";
+                }
+                else {
+                    $("#LitErrorMsg").html("领取出错，请重新领取!");
+                    return false;
+                }
+            }
+            else {
+                $("#LitErrorMsg").html("领取出错，请重新领取!");
+            }
+        });
+        </script>
+
+        <!--百度统计代码-->
+        <script type="text/javascript">
+            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F2b628be552d9d3e5ef988260de406cfc' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
+        <script>
+            BizQQWPA.addCustom({ aty: '2', a: '2', nameAccount: 4008232520, selector: 'BizQQWPA' });
+            BizQQWPA.visitor({ nameAccount: '4008232520' });
+        </script>
+</body>
+</html>
